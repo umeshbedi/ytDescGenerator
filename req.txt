@@ -1,1 +1,3 @@
-kivy
+kivy==2.3.0
+watchdog==4.0.1
+kivymd==1.2.0
