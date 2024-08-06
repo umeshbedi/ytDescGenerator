@@ -9,38 +9,38 @@ load_dotenv()
 Window.size = (350,650)
 Window._set_window_pos(0,25)
 
-class SM(ScreenManager):
-    def get_classes(self):
-        return {screen.__class__.__name__: screen.__class__.__module__ for screen in self.screens}
-
-
-class MainApp(MDApp):
-    DEBUG = True
-    sm = None
-    
-    def build_app(self, first=False):
-        
-        KV_FILES = []
-        self.sm = SM()
-        CLASSES = self.sm.get_classes()
-        self.sm.current = "upload"
-
-        return self.sm
-    
-
-
-
 # class SM(ScreenManager):
-#     pass
+#     def get_classes(self):
+#         return {screen.__class__.__name__: screen.__class__.__module__ for screen in self.screens}
 
 
 # class MainApp(MDApp):
+#     DEBUG = True
 #     sm = None
-
-#     def build(self):
+    
+#     def build_app(self, first=False):
+        
+#         KV_FILES = []
 #         self.sm = SM()
-#         self.sm.current = 'one'
+#         CLASSES = self.sm.get_classes()
+#         self.sm.current = "upload"
+
 #         return self.sm
+    
+
+
+
+class SM(ScreenManager):
+    pass
+
+
+class MainApp(MDApp):
+    sm = None
+
+    def build(self):
+        self.sm = SM()
+        self.sm.current = 'upload'
+        return self.sm
 
 
 
