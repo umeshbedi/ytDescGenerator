@@ -1,0 +1,47 @@
+<UploadScreen>:
+    on_enter:print("entered")
+    
+    MDRoundFlatButton:
+        id: changeupload
+        text: "Select Video"
+        md_bg_color: [1, 1, 1, 1]
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+        on_release: root.file_manager_open()
+    
+    MDRoundFlatButton:
+        id: changeupload
+        text: "Transcribe audio"
+        md_bg_color: [1, 1, 1, 1]
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        on_release: root.transcribe()
+    
+    MDRoundFlatButton:
+        id: changeupload
+        text: "Generate Image Captions"
+        md_bg_color: [1, 1, 1, 1]
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        on_release: root.generateImageCaption()
+    
+    MDRoundFlatButton:
+        id: extractFrames
+        text: "Extract Frames"
+        md_bg_color: [1, 1, 1, 1]
+        pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+        on_release: root.extractFrames()
+    
+    MDRoundFlatButton:
+        id: extractFrames
+        text: "Extract Audio"
+        md_bg_color: [1, 1, 1, 1]
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        on_release: root.extractAudio()
+    
+    Button:
+        text: "Generate Title"
+        size_hint: .66, .065
+        pos_hint: {'center_x': 0.5,'center_y': 0.09}
+        background_color:255,0,0,1
+        on_release:root.generateCaption()
+        
+
+    

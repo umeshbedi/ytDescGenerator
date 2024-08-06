@@ -1,6 +1,5 @@
 <Two>:
-    md_bg_color: [0.5, 0.5, 0.5, 1]
-
+    
     MDLabel:
         id: label_one
         text: "SCREEN TWO"
@@ -15,13 +14,17 @@
 
     MDTextField:
         id: data
-        text: "data two"
+        hint_text:"Data will display here"
         pos_hint: {'center_x': 0.5, 'center_y': 0.4}
-        size_hint_x: 0.5
+        size_hint_x: .8
+        multiline:True
+        
 
     MDRoundFlatButton:
         id: change_screen
         text: "Go to screen 1"
         md_bg_color: [1, 1, 1, 1]
         pos_hint: {'center_x': 0.5, 'center_y': 0.3}
-        on_release: app.sm.current = 'one'
+        on_release: 
+            app.sm.transition.direction = "right"
+            app.sm.current = 'upload'

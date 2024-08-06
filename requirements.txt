@@ -1,0 +1,8 @@
+kivy==2.3.0
+watchdog==4.0.1
+kivymd==1.2.0
+moviepy==1.0.3
+google-generativeai
+markdown 
+python-docx
+bs4
